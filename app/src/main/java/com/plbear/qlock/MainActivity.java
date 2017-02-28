@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mAdminName = new ComponentName(this, AdminManageReceiver.class);
-
+        //获取设备管理器
         DevicePolicyManager mDPM = (DevicePolicyManager) this.getSystemService(Context.DEVICE_POLICY_SERVICE);
         if (!mDPM.isAdminActive(mAdminName)) {
             showAdminManage();
